@@ -20,19 +20,27 @@ reviews
 
 **Step 1 :** Cleansed the data using regular expression , it will remove all the html tags
 and​ ​special​ ​character​ ​except​ ​spaces​ ​from​ ​the​ ​review​ ​text.
+
 **Step 2 :** Filter all the shorter words which have length less than 5 character as it doesn’t
 contribute​ ​anything​ ​to​ ​the​ ​model.
+
 **Step 3 :** Perform above two steps for both train and test dataset and merge both list
 before​ ​creating​ ​sparse​ ​matrix.
+
 **Step 4** : Now create CSR matrix and split the matrix into two halve so that will have two
 sparse​ ​matrix​ ​with​ ​same​ ​dimensions.
+
 **Step 5** ​ ​:​ ​Use​ ​cosine​ ​similarity​ ​built​ ​in​ ​function​ ​from​ ​sklearn​ ​to​ ​calculate​ ​cosine​ ​similarity.
+
 **Step 6** : This will calculate cosine similarity value for each test review with 25k train
 review​ ​and​ ​will​ ​create​ ​25k​ ​x​ ​25k​ ​matrix.
+
 **Step 7** : Now for each row in cosine matrix find top k similarity value and store their
 indices​ ​in​ ​the​ ​list​ ​using​ ​numpy​ ​arg​ ​partition.
+
 **Step 8** : For each index from top index list check the polarity in the traindata set and
 count​ ​the​ ​negative​ ​polarity​ ​or​ ​positive​ ​polarity.
+
 **Step 9** : On the basis of count of negative polarity and positive polarity predict the
 polarity​ ​test​ ​review.
 
