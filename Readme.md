@@ -1,4 +1,4 @@
-# Rank ​ ​ & ​ ​ Accuracy
+# Accuracy
 
 Accuracy​ ​-​ ​74%
 
